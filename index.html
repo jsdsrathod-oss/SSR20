@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahitya is 20 ✨ — A Bespoke Digital Gift</title>
+  <meta name="description" content="Happy 20th Birthday Sahitya! A cinematic, immersive digital experience celebrating 20 years of chaos, color, and memories. Created with love by Jay.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Premium Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!-- Icon Font for Music and Navigation UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="loading-state">
+
+  <!-- Grain overlay for vintage cinematic texture -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Trail (Desktop only, hidden on touch devices) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Ambient Audio Controls -->
+  <div class="audio-control-container">
+    <button id="audio-toggle-btn" class="audio-btn" aria-label="Toggle ambient music" title="Play ambient music">
+      <span class="music-bars">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+      <span class="audio-status-text">SOUND OFF</span>
+    </button>
+    <audio id="ambient-audio" loop preload="auto">
+      <!-- Stand by Me by Ben E. King -->
+      <source src="assets/stand_by_me.mp3" type="audio/mpeg">
+      <source src="https://archive.org/download/OldPop_103/Stand%20By%20Me%20-%20Ben%20E%20King.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Vertical Chapter Progress Indicator (Floating Navbar) -->
+  <nav class="side-navigation" aria-label="Chapter navigation">
+    <ul>
+      <li><a href="#hero" class="nav-dot active" data-chapter="0" aria-label="Golden Hour Hero"><span class="dot-label">Golden Hour</span></a></li>
+      <li><a href="#timeline" class="nav-dot" data-chapter="1" aria-label="The Story So Far"><span class="dot-label">How it started</span></a></li>
+      <li><a href="#gallery" class="nav-dot" data-chapter="2" aria-label="Gallery of Glow"><span class="dot-label">Gallery of Glow</span></a></li>
+      <li><a href="#jokes" class="nav-dot" data-chapter="3" aria-label="Secret Wheel"><span class="dot-label">Secret Wheel</span></a></li>
+      <li><a href="#trivia" class="nav-dot" data-chapter="4" aria-label="Cute Puzzle"><span class="dot-label">Cute Puzzle</span></a></li>
+      <li><a href="#letter" class="nav-dot" data-chapter="5" aria-label="The Love Letter"><span class="dot-label">Love Letter</span></a></li>
+      <li><a href="#interactive" class="nav-dot" data-chapter="6" aria-label="Friendship-o-Meter"><span class="dot-label">Our Meter</span></a></li>
+      <li><a href="#finale" class="nav-dot" data-chapter="7" aria-label="Grand Finale"><span class="dot-label">Grand Finale</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- CHAPTER 0: Curtain / Loading overlay -->
+  <div id="curtain-loader" class="curtain-overlay-panel">
+    <div class="curtain-left"></div>
+    <div class="curtain-right"></div>
+    <div class="curtain-content">
+      <div class="curtain-signature-wrap">
+        <h1 class="curtain-title">For Sahitya</h1>
+        <p class="curtain-subtitle">A digital gift from Jay</p>
+      </div>
+      <div class="wax-seal-wrapper">
+        <button id="wax-seal-btn" class="wax-seal" aria-label="Break the seal to begin">
+          <span class="seal-letter">S</span>
+          <span class="seal-sparkle"></span>
+        </button>
+      </div>
+      <p class="curtain-prompt animate-pulse">Tap to break the seal & begin</p>
+    </div>
+  </div>
+
+  <!-- Main Scroll Container -->
+  <main id="main-scroll-container">
+
+    <!-- CHAPTER 1: HERO (Golden Hour Glam) -->
+    <section id="hero" class="chapter active" data-chapter="0">
+      <div class="hero-bg-media" style="background-image: url('assets/hero_bg.jpg');"></div>
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-header-wrap">
+          <span class="eyebrow fade-in">CHAPTER ONE // THE INVITATION</span>
+          <h1 class="hero-main-title">
+            <span class="title-line-1 fade-in">SAPPIE'S</span>
+            <span class="title-line-2 font-serif fade-in">TWENTY</span>
+          </h1>
+          <div class="hero-tagline-scroller fade-in">
+            <div class="tagline-track">
+              <span class="tagline-item">20 years of chaos with elegance.</span>
+              <span class="tagline-item">The girl who turns ordinary rooms into parties.</span>
+              <span class="tagline-item">Our drama queen officially leaves her teens.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-watermark font-serif" aria-hidden="true">20</div>
+
+        <div class="hero-scroll-cue">
+          <span class="scroll-text">Scroll to reveal</span>
+          <div class="scroll-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: THE STORY SO FAR (Timeline) -->
+    <section id="timeline" class="chapter" data-chapter="1">
+      <div class="container timeline-container">
+        <header class="section-header">
+          <span class="eyebrow">CHAPTER TWO // THE STORY SO FAR</span>
+          <h2 class="section-title font-serif">How it all started</h2>
+          <p class="section-subtitle">The story that makes this day the best EVER!!</p>
+        </header>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-progress-bar"><div class="timeline-progress-fill"></div></div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item left-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card glass-card">
+              <div class="card-image" style="background-image: url('assets/milestone1.jpeg');" role="img" aria-label="The jacket that had to be praised"></div>
+              <div class="card-content">
+                <span class="card-date">13 August 2023</span>
+                <h3 class="card-title font-serif">The Jacket That Had To Be Praised</h3>
+                <p class="card-desc">Complimenting that jacket was the excuse. You were always the reason. That one conversation was all it took for a day to become a memory I'd cherish forever. All I could do back then was admire the subtle strength in your presence, quietly and completely. Some people enter a room. You entered my story.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item right-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card glass-card">
+              <div class="card-image" style="background-image: url('assets/milestone2.jpeg');" role="img" aria-label="The Queen's coronation"></div>
+              <div class="card-content">
+                <span class="card-date">31 January 2024</span>
+                <h3 class="card-title font-serif">The Queen’s Coronation</h3>
+                <p class="card-desc">The way you recited that poem was pure magic. The crowd went silent, my heart froze, and I knew I had just witnessed something unforgettable. That day, you made two hearts fall for you—mine, and Kajal Miss’s. I can never forget the time spent in afterparty. The tarot reader and my privilege to lift your belongings.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item left-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card glass-card">
+              <div class="card-image" style="background-image: url('assets/milestone3.jpeg');" role="img" aria-label="Upscaling the game"></div>
+              <div class="card-content">
+                <span class="card-date">21 March 2024</span>
+                <h3 class="card-title font-serif">Upscaling The Game</h3>
+                <p class="card-desc">I somehow convinced the most intimidating woman I'd ever met to go on a date with me… by trading it for THE 4K video. I asked you out without knowing where to take you, and you ended up dropping me to the metro, and oh how my wallet gave me a proper scare. Everything went hilariously wrong, yet somehow, it all felt perfect. And those chunky Converse? I still don’t know if I like them hehe.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item right-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card glass-card">
+              <div class="card-image" style="background-image: url('assets/milestone4.jpg');" role="img" aria-label="The best day on earth"></div>
+              <div class="card-content">
+                <span class="card-date">4 July 2024</span>
+                <h3 class="card-title font-serif">The Best Day On Earth</h3>
+                <p class="card-desc">I still giggle thinking about that day. Me wearing my brand new white shoes in heavy rain just to impress you, while your friends practically threatened my life before we even met. And then I saw you in that beautiful green dress, and my heart totally forgot how to beat. Sitting beside you, talking for hours, feeling the warmth of your presence, I knew I had chosen the best day to ask you out. And the way you laughed at my terrible attempt, only to tell me to do it again properly. Those hours with you told me everything I needed to know, and left me certain of exactly what I wanted.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: GALLERY OF GLOW (Electric Bloom) -->
+    <section id="gallery" class="chapter" data-chapter="2">
+      <div class="container gallery-container">
+        <header class="section-header">
+          <span class="eyebrow">CHAPTER THREE // GALLERY OF GLOW</span>
+          <h2 class="section-title font-serif">Capturing Your Light</h2>
+          <p class="section-subtitle">A collection of a baddie in her prime.</p>
+        </header>
+
+        <!-- Dynamic Carousel Slider populated in app.js -->
+        <div class="gallery-carousel-wrapper">
+          <button class="carousel-nav-btn prev" id="gallery-carousel-prev" aria-label="Previous Photo">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <div class="gallery-carousel-track-container" id="gallery-carousel-card">
+            <div class="gallery-carousel-card">
+              <div class="gallery-carousel-img" id="gallery-carousel-img"></div>
+              <div class="gallery-carousel-overlay">
+                <i class="fa-solid fa-expand expand-icon"></i>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-nav-btn next" id="gallery-carousel-next" aria-label="Next Photo">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        
+        <div class="gallery-carousel-counter" id="gallery-carousel-counter">Photo 1 of 24</div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div id="gallery-lightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content-wrap">
+          <img id="lightbox-img" src="" alt="Expanded Gallery Image">
+        </div>
+        <button class="lightbox-nav next" id="lightbox-next" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4: SECRETS (Interactive Spin-the-Wheel Coupon Game) -->
+    <section id="jokes" class="chapter" data-chapter="3">
+      <div class="container jokes-container">
+        <header class="section-header">
+          <span class="eyebrow">CHAPTER FOUR // ONLY YOU'D GET THIS</span>
+          <h2 class="section-title font-serif">Spin the Wheel of Love</h2>
+          <p class="section-subtitle">Click SPIN to claim your special date coupon. A reward for two years of magic.</p>
+        </header>
+
+        <div class="wheel-game-wrapper">
+          <div class="wheel-outer-wrapper">
+            <div class="wheel-pointer"><i class="fa-solid fa-caret-down"></i></div>
+            <div class="wheel-canvas-wrap">
+              <canvas id="wheel-canvas" width="380" height="380"></canvas>
+            </div>
+            <button id="spin-btn" class="spin-button font-serif">SPIN</button>
+          </div>
+          
+          <div class="wheel-result-card glass-card hidden" id="wheel-result">
+            <div class="result-badge"><i class="fa-solid fa-ticket"></i></div>
+            <h3 class="result-title font-serif" id="result-title">You Won!</h3>
+            <p class="result-desc" id="result-desc">Coupon detail...</p>
+            <span class="result-footnote">Claimed with love from Jay 🔒</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5: SWEET BIRTHDAY PUZZLE (Interactive Jumbled Memory) -->
+    <section id="trivia" class="chapter" data-chapter="4">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">CHAPTER FIVE // CUTE PUZZLE</span>
+          <h2 class="section-title font-serif">Sweet Birthday Puzzle 🧩</h2>
+          <p class="section-subtitle">Click or tap two tiles to swap their positions and reconstruct the birthday memory! It's super easy and fun.</p>
+        </div>
+
+        <div class="puzzle-game-wrapper">
+          <!-- The 3x3 Puzzle Grid -->
+          <div class="puzzle-grid" id="puzzle-grid">
+            <!-- Tiles will be dynamically injected here by JS -->
+          </div>
+
+          <!-- Interaction button -->
+          <button class="spin-button" style="position: static; width: auto; height: auto; border-radius: 12px; padding: 15px 32px; margin-top: 20px;" id="shuffle-puzzle-btn">Reset Puzzle 🔄</button>
+
+          <!-- Reward proceed card when puzzle is solved -->
+          <div class="jar-success-card glass-card hidden" id="puzzle-success-card">
+            <div class="success-icon">🎉🎂</div>
+            <h3 class="success-title font-serif">You Solved It! 🥰</h3>
+            <p class="success-desc">Happy 20th Birthday, Sahitya! You make every day better. Let's open your next surprise...</p>
+            <button class="spin-button" style="position: static; width: auto; height: auto; border-radius: 12px; padding: 15px 30px; margin: 10px auto;" id="trivia-scroll-btn">Open Your Letter 💌</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6: THE LOVE LETTER (Dreamy Dusk Romance) -->
+    <section id="letter" class="chapter" data-chapter="5">
+      <div class="container letter-container">
+        <header class="section-header">
+          <span class="eyebrow">CHAPTER FIVE // FROM ME TO YOU</span>
+          <h2 class="section-title font-serif letter-title-isolate">A Note for the Record</h2>
+          <p class="section-subtitle">Click the wax seal below to open your letter.</p>
+        </header>
+
+        <div class="envelope-wrapper">
+          <div class="envelope" id="letter-envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            
+            <!-- Letter Sheet inside envelope -->
+            <div class="letter-sheet glass-card" id="letter-sheet">
+              <div class="letter-scroll-content">
+                <h3 class="letter-salutation font-serif">Dear Saps,</h3>
+                
+                <p>Two years ago today, I did something I'd been too nervous to do for months, and I’m always going to hold you for making me to it again. I've been thinking about that a lot lately. How the day everyone else remembers as your birthday is also the day I remember as the start of the best decision I've ever made.</p>
+                
+                <p>Our journey didn’t begin by the textbook definition, if it did, it wouldn’t have been so magical. You were up on a stage singing the most beautiful poem ever made and being announced the Student of the Year, and I was at the end of the other side, behind the crowd, absorbing your radiance, thinking if there is any way I can come and help you with mic again as you were reciting the poem, just so I can witness your performance closely.</p>
+                
+                <p>There's a memory I keep returning to, from the night we got caught in the rain on the way back from our pottery date. You climbed into the cab, tucked yourself under my arm without asking, and stayed there the whole ride. You were tired and snuggled like a baby. I remember it as one of the clearest moments I've had, this quiet understanding that I wanted to be the person you reach for when things get complicated, even something as small as the weather.</p>
+                
+                <p>You rub your nose a little extra when you're studying, or get irritated at something, or right before you say something smarter than whatever I was about to say. Your real laugh, not the polite one you use with people you've just met, is loud enough that our entire friend group can pick you out of another room without seeing you. You hit me, gently, every time I tease you, which is often, but I keep doing it because your reaction is one of my favourite parts of any given day. You light up over food the way some people light up over good news, and you will not be interrupted mid-romcom for any reason short of an actual emergency. None of this is a secret to the people who know you. I think I'm just the one who's spent two years quietly keeping track of all of it.</p>
+                
+                <p>You are, without exaggeration, the most mature person in our age when it comes to knowing how the world works. You inspire me with how you actually carry things, or how you fight some silent wars. Calmly, thoroughly, and without needing anyone to notice how hard you're working. I've watched you build a work ethic most people only ever talk about. I notice it. I don't think I say that enough.</p>
+                
+                <p>Every time life asked more of you, you quietly became more capable of meeting it. You don't always notice yourself changing. I do. And if these two years are any indication, you're nowhere near done growing, which mostly just means I get to keep watching, which might be my favourite part of all of this.</p>
+                
+                <p>What you need to know is that whatever this year looks like, and the one after it, and the ones after that, I plan on being there for all of it. Not telling you this because it's your birthday and I'm supposed to say that, but because two years in, it is still the easiest decision I make every single day.</p>
+                
+                <p>So happy birthday, Saps. Happy two years since I got lucky enough to hear you say yes (the second time). I hope today gives you every small thing you love… good food, a movie you've maybe seen twice, a laugh loud enough that passersby wonder who it belongs to. And somewhere in the middle of all of it, I hope you feel, even for a second, exactly how I've felt for two years straight, like the luckiest version of myself.</p>
+                
+                <p class="letter-signature font-serif">Yours,<br><span class="signature-name">JSR</span></p>
+              </div>
+            </div>
+
+            <!-- Red Interactive Envelope Seal -->
+            <button id="envelope-seal-btn" class="envelope-seal" aria-label="Open the letter">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 7: INTERACTIVE MOMENT (Friendship-o-Meter) -->
+    <section id="interactive" class="chapter" data-chapter="6">
+      <div class="container meter-container">
+        <header class="section-header">
+          <span class="eyebrow">CHAPTER SIX // CALIBRATION</span>
+          <h2 class="section-title font-serif">Are we locked in 4L, G?</h2>
+          <p class="section-subtitle">Drag the slider to sync our coordinates.</p>
+        </header>
+
+        <div class="meter-card glass-card">
+          <div class="meter-display">
+            <span class="meter-number" id="meter-val">0</span><span class="meter-percentage">%</span>
+          </div>
+          
+          <div class="meter-slider-container">
+            <label for="friendship-slider" class="sr-only">Friendship Slider</label>
+            <input type="range" id="friendship-slider" min="0" max="100" value="0" class="custom-slider">
+            <div class="slider-track-highlight" id="slider-highlight"></div>
+          </div>
+
+          <div class="meter-message font-serif" id="meter-message">
+            😭
+          </div>
+          
+          <div class="meter-lock-status" id="meter-lock-status">
+            <i class="fa-solid fa-unlock-keyhole"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 8: GRAND FINALE -->
+    <section id="finale" class="chapter" data-chapter="7">
+      <div class="canvas-container" aria-hidden="true">
+        <canvas id="fireworks-canvas"></canvas>
+      </div>
+
+      <div class="container finale-container">
+        <div class="finale-card glass-card">
+          <span class="eyebrow">THE FINALE // MAKE A WISH</span>
+          <h2 class="finale-title font-serif">Happy 20th Birthday, Sahitya!</h2>
+          <p class="finale-subtitle">Close your eyes, think of something beautiful, and make your wish.</p>
+          
+          <div class="wish-button-wrapper">
+            <button id="make-wish-btn" class="wish-btn font-serif" aria-label="Make a wish and launch fireworks">
+              <span class="btn-text">Make a Wish ✨</span>
+              <span class="btn-glow"></span>
+            </button>
+          </div>
+
+          <div class="finale-footer">
+            <p class="signature font-serif">With all my love, Jay</p>
+            <p class="replay-prompt"><button id="replay-btn" class="text-link-btn" aria-label="Replay the birthday experience"><i class="fa-solid fa-rotate-left"></i> Replay Experience</button></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Easter Egg Indicator -->
+      <button id="easter-egg-btn" class="easter-egg-trigger" aria-label="Secret egg" title="A tiny spark of magic">
+        <i class="fa-solid fa-firefly"></i>
+      </button>
+
+      <!-- Easter Egg Dialog Overlay -->
+      <div id="easter-egg-modal" class="egg-modal" role="dialog" aria-modal="true" aria-label="Secret Message">
+        <div class="egg-card glass-card">
+          <h3 class="egg-title font-serif">🌟 You Found It!</h3>
+          <p class="egg-message font-serif">Jay says: "If you clicked this, you are officially the most curious person on the planet. I hope this website made you smile as much as you make me smile every day. Happy 20th!"</p>
+          <button id="close-egg-btn" class="egg-close-btn" aria-label="Close secret message">Close</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GSAP Core & ScrollTrigger from Cloudflare CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <!-- GSAP ScrollToPlugin for smooth replay returning -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  
+  <!-- Canvas Confetti for Celebration triggers -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <!-- Custom App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
